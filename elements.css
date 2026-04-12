@@ -1,0 +1,344 @@
+
+
+   
+/* From Uiverse.io by LilaRest */ 
+.bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 25px 20px 22px;
+    box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #e8e8e8;
+    border-color: #ffe2e2;
+    border-style: solid;
+    border-width: 9px;
+    border-radius: 35px;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: 900;
+    color: rgb(134, 124, 124);
+    font-family: monospace;
+    transition:
+      transform 400ms cubic-bezier(0.68, -0.55, 0.27, 2.5),
+      border-color 400ms ease-in-out,
+      background-color 400ms ease-in-out;
+    word-spacing: -2px;
+  }
+  
+  @keyframes movingBorders {
+    0% {
+      border-color: #fce4e4;
+    }
+  
+    50% {
+      border-color: #ffd8d8;
+    }
+  
+    90% {
+      border-color: #fce4e4;
+    }
+  }
+  
+  .bt:hover {
+    background-color: #eee;
+    transform: scale(105%);
+    animation: movingBorders 3s infinite;
+  }
+  
+  .bt svg {
+    margin-right: 11px;
+    fill: rgb(255, 110, 110);
+    transition: opacity 100ms ease-in-out;
+  }
+  
+  .filled {
+    position: absolute;
+    opacity: 0;
+    top: 20px;
+    left: 22px;
+  }
+  
+  @keyframes beatingHeart {
+    0% {
+      transform: scale(1);
+    }
+  
+    15% {
+      transform: scale(1.15);
+    }
+  
+    30% {
+      transform: scale(1);
+    }
+  
+    45% {
+      transform: scale(1.15);
+    }
+  
+    60% {
+      transform: scale(1);
+    }
+  }
+  
+  .bt:hover .empty {
+    opacity: 0;
+  }
+  
+  .bt:hover .filled {
+    opacity: 1;
+    animation: beatingHeart 1.2s infinite;
+  }
+  
+
+
+
+/* Prior to using this loader, please ensure that you have set a background image or background color, as the text is transparent and not designed with a solid color. */
+/*code by acharya viren from Get Code*/
+.ler {
+  --ANIMATION-DELAY-MULTIPLIER: 70ms;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.ler span {
+  padding: 0;
+  margin: 0;
+  letter-spacing: -5rem;
+  animation-delay: 0s;
+  transform: translateY(4rem);
+  animation: hideAndSeek 1s alternate infinite cubic-bezier(0.86, 0, 0.07, 1);
+}
+.ler .l {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 0);
+}
+.ler .o {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 1);
+}
+.ler .a {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 2);
+}
+.ler .d {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 3);
+}
+.ler .ispan {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 4);
+}
+.ler .n {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 5);
+}
+.ler .g {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 6);
+}
+.letter {
+  width: fit-content;
+  height: 3rem;
+}
+.i {
+  margin-inline: 5px;
+}
+@keyframes hideAndSeek {
+  0% {
+    transform: translateY(4rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by Shoh2008 */ 
+.loader {
+    width: 120px;
+    height: 150px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#ddd 50%, #bbb 51%),
+      linear-gradient(#ddd, #ddd), linear-gradient(#ddd, #ddd),
+      radial-gradient(ellipse at center, #aaa 25%, #eee 26%, #eee 50%, #0000 55%),
+      radial-gradient(ellipse at center, #aaa 25%, #eee 26%, #eee 50%, #0000 55%),
+      radial-gradient(ellipse at center, #aaa 25%, #eee 26%, #eee 50%, #0000 55%);
+    background-position: 0 20px, 45px 0, 8px 6px, 55px 3px, 75px 3px, 95px 3px;
+    background-size: 100% 4px, 1px 23px, 30px 8px, 15px 15px, 15px 15px, 15px 15px;
+    position: relative;
+    border-radius: 6%;
+    animation: shake 3s ease-in-out infinite;
+    transform-origin: 60px 180px;
+  }
+  
+  .loader:before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 100%;
+    width: 7px;
+    height: 5px;
+    background: #aaa;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 102px 0 #aaa;
+  }
+  
+  .loader:after {
+    content: "";
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 20px;
+    background-color: #bbdefb;
+    background-image: linear-gradient( to right, #0004 0%, #0004 49%, #0000 50%, #0000 100% ),
+      linear-gradient(135deg, #64b5f6 50%, #607d8b 51%);
+    background-size: 30px 100%, 90px 80px;
+    border-radius: 50%;
+    background-repeat: repeat, no-repeat;
+    background-position: 0 0;
+    box-sizing: border-box;
+    border: 10px solid #DDD;
+    box-shadow: 0 0 0 4px #999 inset, 0 0 6px 6px #0004 inset;
+    animation: spin 3s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg)
+    }
+  
+    50% {
+      transform: rotate(360deg)
+    }
+  
+    75% {
+      transform: rotate(750deg)
+    }
+  
+    100% {
+      transform: rotate(1800deg)
+    }
+  }
+  
+  @keyframes shake {
+    65%, 80%, 88%, 96% {
+      transform: rotate(0.5deg)
+    }
+  
+    50%, 75%, 84%, 92% {
+      transform: rotate(-0.5deg)
+    }
+  
+    0%, 50%, 100% {
+      transform: rotate(0)
+    }
+  }
+
+
+
+
+
+.par{
+    color: aqua;
+    margin-left: 50%;
+    /* margin-right: 50%; */
+}
+body{
+    padding-top: 90px;
+}
+.scroll{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.block {
+    background-color: rgb(48, 45, 45);
+    border-radius: 10px;
+    min-width: 300px;
+    max-width: 80%;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    justify-content: center;
+    padding: 40px;
+    margin: 50px;
+    align-items: center;
+    box-shadow: 0 0 5px black inset;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    position: relative; /* Important for absolute positioning of the button */
+}
+.block .hoverbtn:hover {
+  background-color: #b9c7d3;
+  color: white;
+  border-color: #b9c7d3;
+}
+/* Hide the button by default */
+.block .hoverbtn {
+position : absolute;
+bottom: 10px;
+right: 10px;
+padding: 8px 12px;
+background-color: transparent;
+color: white;
+border: none; 
+border-radius: 5px;
+cursor: pointer;
+opacity: 0;
+visibility: hidden;
+transform: translateY(10px); /* Small downward shift */
+transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+display: flex;
+align-items: center; 
+gap: 2px; 
+}
+
+/* Show the button when hovering over the block */
+.block:hover .hoverbtn {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+   
+}
+.block.hoverbtn svg {
+  width: 12px;
+  height: 13px;
+  stroke: white;
+}
+
+
+.getc{
+    margin-right: 0;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.4;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}

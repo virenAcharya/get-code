@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+<header class="site-header">
+    <div class="header-container">
+      <div class="log">
+        <div class="logo">
+          <img src="logo.png" class="logoo">
+            <p>Getcode</p> 
+        </div>
+      </div>
+      <nav class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="categories">
+              <a href="#">Categories</a>
+              <ul class="dropdown">
+                  <li><a href="#">All</a></li>
+                  <li><a href="#">Button</a></li>
+                  <li><a href="#">Input</a></li>
+                  <li><a href="#">Form</a></li>
+                  <li><a href="#">Toggle Switch</a></li>
+                  <li><a href="#">Checkbox</a></li>
+                  <li><a href="#">Radio Button</a></li>
+                  <li><a href="#">Loaders</a></li>
+              </ul>
+            </li>
+        </ul>
+      </nav>
+    </div>
+</header>
+
+</body>
+</html>

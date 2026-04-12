@@ -1,0 +1,219 @@
+.button-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust spacing */
+}
+
+
+.create-button {
+    background: linear-gradient(45deg, #a855f7, #6366f1);
+    color: white;
+    font-size: 22px; /* Bigger text */
+    font-weight: bold;
+    padding: 16px 32px; /* Increased padding */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers content */
+    gap: 12px;
+    height: 55px; /* Taller button */
+    min-width: 115px; /* Wider button */
+}
+
+.create-button .plus-icon {
+    font-size: 28px; /* Bigger "+" icon */
+    font-weight: bold;
+}
+
+
+.create-button:hover {
+    background: linear-gradient(to right, #9333ea, #4f46e5);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.site-header {
+    position: fixed;  /* Keep it fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and theme button */
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+}
+
+/* Styling for the Logo */
+header .logo {
+    font-size: 30px; /* Larger font size for emphasis */
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase; /* Make the name uppercase */
+    display: flex; /* Use flexbox to align the image and text side by side */
+    align-items: center; /* Vertically center the items */
+}
+
+.logoo {
+    height: 7dvh;
+    width: 5lvw;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: center; /* Center the nav */
+    flex-grow: 1; /* Allow the nav to grow and take available space */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center; /* Center the navigation items */
+    margin: 0; /* Remove margin from the ul */
+    padding: 0; /* Remove padding from the ul */
+}
+
+nav ul li {
+    margin-left: 20px; /* Add space between the items */
+    position: relative; /* Ensure it is positioned relative for dropdown */
+}
+
+/* General Style for Links */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect for Links */
+nav ul li a:hover {
+    background-color: #575757;
+    transform: translateY(-3px); /* Slight lift effect on hover */
+   /* color: #FFD700; /* Gold color on hover for all links */
+}
+
+
+
+/* Categories Dropdown */
+nav ul li.categories {
+    position: relative; 
+}
+
+nav ul li.categories:hover .dropdown {
+    visibility: visible; /* Make the dropdown visible */
+    opacity: 1; /* Make it fully visible on hover */
+    /* display: grid; */
+    transform: translateY(0); /* Smoothly move the dropdown into place */
+}
+
+/* Initial State of the Dropdown */
+nav ul li .dropdown {
+    visibility: hidden; /* Make it hidden by default */
+    opacity: 0; /* Initially hidden */
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* 4 columns */
+    gap: 10px; /* Spacing between items */
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    /*padding:3px;*/
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px); /* Initially above the normal position */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.2s 0.3s; /* Smooth transition */
+}
+
+/* Dropdown Item Style */
+nav ul li .dropdown li {
+    margin: 0; /* Remove margin */
+    list-style: none;
+}
+
+/* Dropdown Link Style */
+nav ul li .dropdown li a {
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 12px;
+    display: block;
+    text-decoration: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Dropdown Links */
+nav ul li .dropdown li a:hover {
+    background-color: #575757;
+    transform: translateX(5px); /* Slight slide effect on hover */
+}
+
+/* Hover Effect for Categories Link */
+nav ul li.categories a {
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Theme Switch Button */
+.theme-switch {
+    margin-left: auto; /* Pushes the theme switch to the right */
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul li .dropdown {
+        grid-template-columns: repeat(4, auto); /* Change to 2 columns for smaller screens */
+    } 
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%; /* Ensure nav takes full width in mobile */
+        justify-content: center; /* Keep nav centered */
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+        text-align: left; /* Align links to the left on small screens */
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}

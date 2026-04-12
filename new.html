@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add UI Element</title>
+    <style>
+        #htmlCode{
+            background-color: #222;
+            color:aliceblue;
+        }
+        #cssCode{
+            background-color: #222;
+            color:aliceblue;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            height: 500px;
+        }
+        .preview, .code-editor {
+            flex: 1;
+            height: 100%;
+        }
+        .preview {
+            background: #222;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-left-radius: 13px;
+            border-bottom-left-radius: 13px;
+        }
+        .preview iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .code-editor {
+            background: #3c3535;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-top-right-radius: 13px;
+            border-bottom-right-radius: 13px;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .button-group button {
+            background: #141414;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .button-group button.active {
+            background: #222;
+            color: white;
+        }
+        textarea {
+            width: 100%;
+            flex: 1;
+            padding: 10px;
+            font-family: monospace;
+            border-radius: 5px;
+            /* border: 1px solid #ccc; */
+            resize: vertical;
+            display: none;
+            min-height: 200px;
+        }
+        textarea.active {
+            display: block;
+            border: none;
+        }
+        button.submit {
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: blue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button.submit:hover {
+            background: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="preview">
+        <iframe id="output"></iframe>
+    </div>
+
+    <div class="code-editor">
+        <div class="button-group">
+            <button id="htmlBtn" class="active" onclick="toggleEditor('html')">HTML</button>
+            <button id="cssBtn" onclick="toggleEditor('css')">CSS</button>
+        </div>
+        
+        <textarea id="htmlCode" class="active" placeholder="Enter HTML here..."></textarea>
+        <textarea id="cssCode" placeholder="Enter CSS here..."></textarea>
+        
+        <button class="submit" onclick="updatePreview()">Submit</button>
+    </div>
+</div>
+
+<script>
+    function updatePreview() {
+        const html = document.getElementById("htmlCode").value;
+        const css = document.getElementById("cssCode").value;
+        const iframe = document.getElementById("output").contentWindow.document;
+        
+        iframe.open();
+        iframe.write(`<html><head><style>${css}</style></head><body>${html}</body></html>`);
+        iframe.close();
+    }
+
+    document.getElementById("htmlCode").addEventListener("input", updatePreview);
+    document.getElementById("cssCode").addEventListener("input", updatePreview);
+
+    function toggleEditor(type) {
+        document.getElementById("htmlCode").classList.toggle("active", type === 'html');
+        document.getElementById("cssCode").classList.toggle("active", type === 'css');
+        document.getElementById("htmlBtn").classList.toggle("active", type === 'html');
+        document.getElementById("cssBtn").classList.toggle("active", type === 'css');
+    }
+</script>
+
+</body>
+</html>

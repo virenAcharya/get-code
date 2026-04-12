@@ -1,0 +1,136 @@
+.far{
+    position: static;
+    padding-left: 20%;
+    padding-right: 40%;
+    padding-top: 17%;
+    /* padding-bottom: 7%; */
+    /* margin-right: 70px; */
+    /* margin-top: 20px; */
+}
+.in, .bb {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    padding: 10px;
+    border: 0.1px solid #575cb5;
+  }
+  
+  .bb {
+    background: #6d74e3;
+    border: none;
+  }
+  
+  .dark-theme  .bb {
+    background: #6d74e3;
+    border: none;
+  }
+
+  .wr {
+    position: relative;
+    transform: skewY(-14deg);
+  }
+  
+  .wr li, .bb {
+    position: relative;
+    list-style: none;
+    width: 200px;
+    z-index: var(--i);
+    transition: 0.3s;
+    color: white;
+  }
+  
+  .wr li::before, .bb::before {
+    position: absolute;
+    content: '';
+    background: #6d74e3;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 40px;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.3s;
+  }
+  
+
+  .wr li::after, .bb::after {
+    position: absolute;
+    content: '';
+    background: #6d74e3;
+    width: 200px;
+    height: 40px;
+    top: -40px;
+    left: 0;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.3s;
+  }
+  
+
+  .wr li:nth-child(1)::after, .wr li:nth-child(1)::before {
+    background-color: #d8daf7;
+  }
+  
+  .wr li:nth-child(2)::after, .wr li:nth-child(2)::before {
+    background-color: #c2c5f3;
+  }
+  
+  .wr li:nth-child(3)::after, .wr li:nth-child(3)::before {
+    background-color: #989deb;
+  }
+  
+  li .in {
+    outline: none;
+    border: none;
+    color: black;
+  }
+  
+  li .in::placeholder {
+    color: black;
+  }
+  
+  li:nth-child(1) .in {
+    background: #d8daf7;
+  }
+  
+  li:nth-child(2) .in {
+    background: #c2c5f3;
+  }
+  
+  li:nth-child(3) .in {
+    background: #989deb;
+  }
+  
+  
+  li:nth-child(1) .in:focus {
+    outline: none;
+    border: 3.5px solid #d8daf7;
+  }
+  
+  li:nth-child(2) .in:focus {
+    outline: none;
+    border: 3.5px solid #c2c5f3;
+  }
+  
+  li:nth-child(3) .in:focus {
+    outline: none;
+    border: 3.5px solid #989deb;
+  }
+  
+  .wr li:hover, .bb:hover {
+    transform: translateX(-20px);
+  }
+  
+  .bb:hover, .bb:hover::before, .bb:hover::after {
+    background: #575cb5;
+  }
+  
+.dark-theme   .bb:hover, .bb:hover::before, .bb:hover::after {
+  background: #575cb5;
+}
+
+
+
+  .bb:active {
+    transform: translateX(0px);
+  }

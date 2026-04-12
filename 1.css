@@ -1,0 +1,113 @@
+body {
+    background: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    padding: 20px;
+    background: #111;
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 13px;
+    cursor: pointer;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-left: 20px;
+    gap: 0; /* Ensures no extra space */
+}
+
+.code-preview,
+.code-editor {
+    width: 40%;
+    height: 50%;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0; /* Removes any extra spacing */
+}
+
+.code-preview {
+    margin-left: 0;
+}
+
+.checkBox {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 2px white;
+}
+
+.tabs {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.tabs button {
+    background: #333;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tabs button.active {
+    background: #555;
+}
+
+.tabs button img {
+    width: 20px;
+    height: 20px;
+}
+
+.code-container {
+    height: 90%;
+    width: 100%;
+    max-width: 600px;
+    overflow: auto;
+    border: 1px solid white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+pre.code {
+    margin: 0;
+    padding: 10px;
+    height: 45%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    min-height: 150px; /* Ensures the pre tag stays the same size */
+}
+
+
+

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+    <link rel="stylesheet" href="red.css">
+    <link rel="stylesheet" href="10.css">
+    <link rel="stylesheet" href="elements.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="light-dark-btn.css">
+    
+    <script>
+        function showCode(type) {
+            document.getElementById('html-code').style.display = type === 'html' ? 'block' : 'none';
+            document.getElementById('css-code').style.display = type === 'css' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<header class="site-header">
+    <div class="header-container">
+      <div class="log">
+        <div class="logo">
+          <img src="logo.png" class="logoo">
+            <p>Getcode</p> 
+        </div></div>
+        <nav class="navigation">
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="aboutus.html">About</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+                <li class="categories">
+                  <a href="#">Categories</a>
+                  <ul class="dropdown">
+                      <li><a href="#">all</a></li>
+                      <li><a href="#">Button</a></li>
+                      <li><a href="#">Input</a></li>
+                      <li><a href="#">Form</a></li>
+                      <li><a href="#">Toggle Switch</a></li>
+                      <li><a href="#">Checkbox</a></li>
+                      <li><a href="#">radio button</button></a></li>
+                      <li><a href="#">loaders</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </nav>
+    </div>
+
+    <label class="theme-switch">
+        <input type="checkbox" class="theme-switch__checkbox" onclick="darklight()" checked>
+        <div class="theme-switch__container">
+          <div class="theme-switch__clouds"></div>
+          <div class="theme-switch__stars-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z" fill="currentColor"></path>
+            </svg>
+          </div>
+          <div class="theme-switch__circle-container">
+            <div class="theme-switch__sun-moon-container">
+              <div class="theme-switch__moon">
+                <div class="theme-switch__spot"></div>
+                <div class="theme-switch__spot"></div>
+                <div class="theme-switch__spot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </label>
+</header>
+
+<body>
+   
+    <!-- Sidebar -->
+     <div class="content-wrapper">
+
+    <div class="sidebar">
+        <ul>
+            <li>All</li>
+            <li>Buttons</li>
+            <li>Checkboxes</li>
+            <li>Toggle switches</li>
+            <li>Cards</li>
+            <li>Loaders</li>
+            <li>Inputs</li>
+            <li>Radio buttons</li>
+        </ul>
+    </div>
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <div class="top-nav">
+        <a href="home.html"> <button class="back-button">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M15 6L9 12L15 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+             </svg>
+             Go back
+         </button></a>
+     </div>
+        <div class="code-preview">
+            <div class="las">
+                <div class="box">
+                  <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 94" class="svg">
+                        <!-- 'G' Letter -->
+                        <path
+                          d="M35 20C23 20 15 30 15 44s8 24 20 24c8 0 14-3 18-8l-7-5c-3 4-7 6-11 6-6 0-11-6-11-13s5-13 11-13c5 0 8 2 11 6h-9v7h20v-2c0-11-8-20-20-20z"
+                        ></path>
+                        
+                        <!-- Adding Space -->
+                        <rect x="65" y="20" width="10" height="5" fill="none"></rect>
+                      
+                        <!-- 'C' Letter -->
+                        <path
+                          d="M90 20c-12 0-20 10-20 24s8 24 20 24c7 0 14-3 18-8l-7-5c-3 4-7 6-11 6-6 0-11-6-11-13s5-13 11-13c4 0 8 2 11 6l7-5c-4-5-11-8-18-8z"
+                        ></path>
+                        
+                        <!-- Underline -->
+                        <rect x="20" y="85" width="100" height="5" fill="currentColor"></rect>
+                      </svg>
+                      
+                    
+                  </div>
+                </div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+              </div>
+  
+        </div>
+        <div class="code-editor">
+            <div class="tabs">
+                <button class="active" onclick="showCode('html')">
+                    <svg width="25px" height="25px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#E44D26" d="M10 0h80l-7 79-33 11-33-11z"/>
+                        <path fill="#F16529" d="M50 83l26-7 6-67H50z"/>
+                        <path fill="#EBEBEB" d="M50 41H33l-1-7h18V28H31l-1-13h40v6H38l1 7h25z"/>
+                        <path fill="white" d="M50 41v7h14l-2 19-12 3v7l20-6 3-30z"/>
+                    </svg>  HTML
+                </button>
+                
+                <button class="active" onclick="showCode('css')">
+                    <svg width="25px" height="25px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#264DE4" d="M10 0h80l-7 79-33 11-33-11z"/>
+                        <path fill="#2965F1" d="M50 83l26-7 6-67H50z"/>
+                        <path fill="#EBEBEB" d="M50 41H33l-1-7h18V28H31l-1-13h40v6H38l1 7h25z"/>
+                        <path fill="white" d="M50 41v7h14l-2 19-12 3v7l20-6 3-30z"/>
+                    </svg>
+                    CSS</button>
+                    <button onclick="copyText()" class="cop">Copy</button>
+            </div>
+            <div class="code-container">
+                <pre id="html-code" class="code">
+ <div class="las">
+                <div class="box">
+                  <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 94" class="svg">
+                        <!-- 'G' Letter -->
+                        <path
+                          d="M35 20C23 20 15 30 15 44s8 24 20 24c8 0 14-3 18-8l-7-5c-3 4-7 6-11 6-6 0-11-6-11-13s5-13 11-13c5 0 8 2 11 6h-9v7h20v-2c0-11-8-20-20-20z"
+                        ></path>
+                        
+                        <!-- Adding Space -->
+                        <rect x="65" y="20" width="10" height="5" fill="none"></rect>
+                      
+                        <!-- 'C' Letter -->
+                        <path
+                          d="M90 20c-12 0-20 10-20 24s8 24 20 24c7 0 14-3 18-8l-7-5c-3 4-7 6-11 6-6 0-11-6-11-13s5-13 11-13c4 0 8 2 11 6l7-5c-4-5-11-8-18-8z"
+                        ></path>
+                        
+                        <!-- Underline -->
+                        <rect x="20" y="85" width="100" height="5" fill="currentColor"></rect>
+                      </svg>
+                      
+                    
+                  </div>
+                </div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+              </div>
+                </pre>
+<pre aria-hidden="true" style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: relative; pointer-events: none; padding: 16px;">
+    
+</pre>
+                <pre id="css-code" class="code" style="display: none;">/*code by acharya viren from Get Code*/
+.las {
+    --size: 250px;
+    --duration: 2s;
+    --logo-color: grey;
+    --background: linear-gradient(
+      0deg,
+      rgba(50, 50, 50, 0.2) 0%,
+      rgba(100, 100, 100, 0.2) 100%
+    );
+    height: var(--size);
+    aspect-ratio: 1;
+    position: relative;
+  }
+  
+  .las .box {
+    position: absolute;
+    background: rgba(100, 100, 100, 0.15);
+    background: var(--background);
+    border-radius: 50%;
+    border-top: 1px solid rgba(100, 100, 100, 1);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 10px -0px;
+    backdrop-filter: blur(5px);
+    animation: ripple var(--duration) infinite ease-in-out;
+  }
+  
+  .las .box:nth-child(1) {
+    inset: 40%;
+    z-index: 99;
+  }
+  
+  .las .box:nth-child(2) {
+    inset: 30%;
+    z-index: 98;
+    border-color: rgba(100, 100, 100, 0.8);
+    animation-delay: 0.2s;
+  }
+  
+  .las .box:nth-child(3) {
+    inset: 20%;
+    z-index: 97;
+    border-color: rgba(100, 100, 100, 0.6);
+    animation-delay: 0.4s;
+  }
+  
+  .las .box:nth-child(4) {
+    inset: 10%;
+    z-index: 96;
+    border-color: rgba(100, 100, 100, 0.4);
+    animation-delay: 0.6s;
+  }
+  
+  .las .box:nth-child(5) {
+    inset: 0%;
+    z-index: 95;
+    border-color: rgba(100, 100, 100, 0.2);
+    animation-delay: 0.8s;
+  }
+  
+  .las .logo {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    padding: 30%;
+  }
+  
+  .las .logo svg {
+    fill: var(--logo-color);
+    width: 100%;
+    animation: color-change var(--duration) infinite ease-in-out;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(1);
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 10px -0px;
+    }
+    50% {
+      transform: scale(1.3);
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 20px -0px;
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 10px -0px;
+    }
+  }
+  
+  @keyframes color-change {
+    0% {
+      fill: var(--logo-color);
+    }
+    50% {
+      fill: white;
+    }
+    100% {
+      fill: var(--logo-color);
+    }
+  }
+  
+                                                                                                                                             
+</pre>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="light-dark.js"></script>
+    <script src="header.js"></script>
+    <script src="html.js"></script>
+    <script src="copy.js"></script>
+</body>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <img src="logo.png" class="footer-logo" alt="Getcode Logo">
+            <p>Getcode - Helping Web Developers Build Faster.</p>
+        </div>
+  
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="aboutus.html">About</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-social">
+            <ul class="lin">
+                <li>
+                  <svg width="35px" height="35px" viewBox="0 0 32.00 32.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.032"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint0_radial_87_7153)"></rect>  <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint1_radial_87_7153)"></rect> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint2_radial_87_7153)"></rect> <path d="M23 10.5C23 11.3284 22.3284 12 21.5 12C20.6716 12 20 11.3284 20 10.5C20 9.67157 20.6716 9 21.5 9C22.3284 9 23 9.67157 23 10.5Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 21C18.7614 21 21 18.7614 21 16C21 13.2386 18.7614 11 16 11C13.2386 11 11 13.2386 11 16C11 18.7614 13.2386 21 16 21ZM16 19C17.6569 19 19 17.6569 19 16C19 14.3431 17.6569 13 16 13C14.3431 13 13 14.3431 13 16C13 17.6569 14.3431 19 16 19Z" fill="white"></path>  <path fill-rule="evenodd" clip-rule="evenodd" d="M6 15.6C6 12.2397 6 10.5595 6.65396 9.27606C7.2292 8.14708 8.14708 7.2292 9.27606 6.65396C10.5595 6 12.2397 6 15.6 6H16.4C19.7603 6 21.4405 6 22.7239 6.65396C23.8529 7.2292 24.7708 8.14708 25.346 9.27606C26 10.5595 26 12.2397 26 15.6V16.4C26 19.7603 26 21.4405 25.346 22.7239C24.7708 23.8529 23.8529 24.7708 22.7239 25.346C21.4405 26 19.7603 26 16.4 26H15.6C12.2397 26 10.5595 26 9.27606 25.346C8.14708 24.7708 7.2292 23.8529 6.65396 22.7239C6 21.4405 6 19.7603 6 16.4V15.6ZM15.6 8H16.4C18.1132 8 19.2777 8.00156 20.1779 8.0751C21.0548 8.14674 21.5032 8.27659 21.816 8.43597C22.5686 8.81947 23.1805 9.43139 23.564 10.184C23.7234 10.4968 23.8533 10.9452 23.9249 11.8221C23.9984 12.7223 24 13.8868 24 15.6V16.4C24 18.1132 23.9984 19.2777 23.9249 20.1779C23.8533 21.0548 23.7234 21.5032 23.564 21.816C23.1805 22.5686 22.5686 23.1805 21.816 23.564C21.5032 23.7234 21.0548 23.8533 20.1779 23.9249C19.2777 23.9984 18.1132 24 16.4 24H15.6C13.8868 24 12.7223 23.9984 11.8221 23.9249C10.9452 23.8533 10.4968 23.7234 10.184 23.564C9.43139 23.1805 8.81947 22.5686 8.43597 21.816C8.27659 21.5032 8.14674 21.0548 8.0751 20.1779C8.00156 19.2777 8 18.1132 8 16.4V15.6C8 13.8868 8.00156 12.7223 8.0751 11.8221C8.14674 10.9452 8.27659 10.4968 8.43597 10.184C8.81947 9.43139 9.43139 8.81947 10.184 8.43597C10.4968 8.27659 10.9452 8.14674 11.8221 8.0751C12.7223 8.00156 13.8868 8 15.6 8Z" fill="white"></path> <defs> <radialGradient id="paint0_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 23) rotate(-55.3758) scale(25.5196)"> <stop stop-color="#B13589"></stop> <stop offset="0.79309" stop-color="#C62F94"></stop> <stop offset="1" stop-color="#8A3AC8"></stop> </radialGradient> <radialGradient id="paint1_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(11 31) rotate(-65.1363) scale(22.5942)"> <stop stop-color="#E0E8B7"></stop> <stop offset="0.444662" stop-color="#FB8A2E"></stop> <stop offset="0.71474" stop-color="#E2425C"></stop> <stop offset="1" stop-color="#E2425C" stop-opacity="0"></stop> </radialGradient> <radialGradient id="paint2_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.500002 3) rotate(-8.1301) scale(38.8909 8.31836)"> <stop offset="0.156701" stop-color="#406ADC"></stop> <stop offset="0.467799" stop-color="#6A45BE"></stop> <stop offset="1" stop-color="#6A45BE" stop-opacity="0"></stop></radialGradient> </defs> </g></svg>
+                  <a href="https://instagram.com/viren_acharya_">instagram</a>
+                </li>
+                <li>
+                  <svg width="35px" height="35px" viewBox="0 0 73.00 73.00" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="7.884"></g><g id="SVGRepo_iconCarrier"> <title>team-collaboration/version-control/github</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="team-collaboration/version-control/github" stroke-width="0.00073" fill="none" fill-rule="evenodd"> <g id="container" transform="translate(2.000000, 2.000000)" fill-rule="nonzero"> <rect id="mask" stroke="#000000" stroke-width="0.00073" fill="#000000" x="-1" y="-1" width="71" height="71" rx="14"> </rect> <path d="M58.3067362,21.4281798 C55.895743,17.2972267 52.6253846,14.0267453 48.4948004,11.615998 C44.3636013,9.20512774 39.8535636,8 34.9614901,8 C30.0700314,8 25.5585181,9.20549662 21.4281798,11.615998 C17.2972267,14.0266224 14.0269912,17.2972267 11.615998,21.4281798 C9.20537366,25.5590099 8,30.0699084 8,34.9607523 C8,40.8357654 9.71405782,46.1187277 13.1430342,50.8109917 C16.5716416,55.5036246 21.0008949,58.7507436 26.4304251,60.5527176 C27.0624378,60.6700211 27.5302994,60.5875152 27.8345016,60.3072901 C28.1388268,60.0266961 28.290805,59.6752774 28.290805,59.2545094 C28.290805,59.1842994 28.2847799,58.5526556 28.2730988,57.3588401 C28.2610487,56.1650247 28.2553926,55.1235563 28.2553926,54.2349267 L27.4479164,54.3746089 C26.9330843,54.468919 26.2836113,54.5088809 25.4994975,54.4975686 C24.7157525,54.4866252 23.9021284,54.4044881 23.0597317,54.2517722 C22.2169661,54.1004088 21.4330982,53.749359 20.7075131,53.1993604 C19.982297,52.6493618 19.4674649,51.9294329 19.1631397,51.0406804 L18.8120898,50.2328353 C18.5780976,49.6950097 18.2097104,49.0975487 17.7064365,48.4426655 C17.2031625,47.7871675 16.6942324,47.3427912 16.1794003,47.108799 L15.9336039,46.9328437 C15.7698216,46.815909 15.6178435,46.6748743 15.4773006,46.511215 C15.3368806,46.3475556 15.2317501,46.1837734 15.1615401,46.0197452 C15.0912072,45.855594 15.1494901,45.7209532 15.3370036,45.6153308 C15.5245171,45.5097084 15.8633939,45.4584343 16.3551097,45.4584343 L17.0569635,45.5633189 C17.5250709,45.6571371 18.104088,45.9373622 18.7947525,46.4057156 C19.4850481,46.8737001 20.052507,47.4821045 20.4972521,48.230683 C21.0358155,49.1905062 21.6846737,49.9218703 22.4456711,50.4251443 C23.2060537,50.9284182 23.9727072,51.1796248 24.744894,51.1796248 C25.5170807,51.1796248 26.1840139,51.121096 26.7459396,51.0046532 C27.3072505,50.8875956 27.8338868,50.7116403 28.3256025,50.477771 C28.5362325,48.9090515 29.1097164,47.7039238 30.0455624,46.8615271 C28.7116959,46.721353 27.5124702,46.5102313 26.4472706,46.2295144 C25.3826858,45.9484285 24.2825656,45.4922482 23.1476478,44.8597436 C22.0121153,44.2280998 21.0701212,43.44374 20.3214198,42.5080169 C19.5725954,41.571802 18.9580429,40.3426971 18.4786232,38.821809 C17.9989575,37.300306 17.7590632,35.5451796 17.7590632,33.5559381 C17.7590632,30.7235621 18.6837199,28.3133066 20.5326645,26.3238191 C19.6665366,24.1944035 19.7483048,21.8072644 20.778215,19.1626478 C21.4569523,18.951772 22.4635002,19.1100211 23.7973667,19.6364115 C25.1314792,20.1630477 26.1082708,20.6141868 26.7287253,20.9882301 C27.3491798,21.3621504 27.8463057,21.6790175 28.2208409,21.9360032 C30.3978419,21.3277217 32.644438,21.0235195 34.9612442,21.0235195 C37.2780503,21.0235195 39.5251383,21.3277217 41.7022622,21.9360032 L43.0362517,21.0938524 C43.9484895,20.5319267 45.0257392,20.0169716 46.2654186,19.5488642 C47.5058357,19.0810026 48.4543466,18.9521409 49.1099676,19.1630167 C50.1627483,21.8077563 50.2565666,24.1947724 49.3901927,26.324188 C51.2390143,28.3136755 52.1640399,30.7245457 52.1640399,33.556307 C52.1640399,35.5455485 51.9232849,37.3062081 51.444357,38.8393922 C50.9648143,40.3728223 50.3449746,41.6006975 49.5845919,42.5256002 C48.8233486,43.4503799 47.8753296,44.2285916 46.7404118,44.8601125 C45.6052481,45.4921252 44.504759,45.9483056 43.4401742,46.2293914 C42.3750975,46.5104772 41.1758719,46.7217219 39.8420054,46.8621419 C41.0585683,47.9149226 41.6669728,49.5767225 41.6669728,51.846804 L41.6669728,59.2535257 C41.6669728,59.6742937 41.8132948,60.0255895 42.1061847,60.3063064 C42.3987058,60.5865315 42.8606653,60.6690374 43.492678,60.5516109 C48.922946,58.7498829 53.3521992,55.5026409 56.7806837,50.810008 C60.2087994,46.117744 61.923472,40.8347817 61.923472,34.9597686 C61.9222424,30.0695396 60.7162539,25.5590099 58.3067362,21.4281798 Z" id="Shape" fill="#FFFFFF"> </path> </g> </g> </g></svg>
+                   <a href="https://github.com/virenAcharya">GitHub</a>
+                </li>
+                <li>
+                  <svg height="35px" width="35px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.00 512.00" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.512"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle style="fill:#A8ADF0;" cx="256" cy="256" r="256"></circle> <path style="fill:#989FEC;" d="M256,0c-11.317,0-22.461,0.744-33.391,2.167C348.216,18.53,445.217,125.933,445.217,256 s-97.002,237.47-222.609,253.833C233.539,511.256,244.683,512,256,512c141.385,0,256-114.616,256-256S397.385,0,256,0z"></path> <path style="fill:#FFFFFF;" d="M417.824,114.172l-1.264-3.206c-0.037-0.092-0.108-0.168-0.199-0.209l-3.138-1.425 c-25.832-11.733-62.269-14.628-94.507-15.911h-36.31c-0.41,0-0.535,0.554-0.166,0.731l74.584,35.757 c0.421,0.201,0.188,0.827-0.264,0.709c-33.543-8.76-67.429-13.194-100.89-13.194c-33.353,0-67.129,4.407-100.569,13.111 c-0.455,0.118-0.686-0.515-0.259-0.712l77.201-35.667c0.374-0.173,0.252-0.733-0.161-0.733h-39.257 c-32.237,1.283-68.676,4.178-94.507,15.911l-3.138,1.425c-0.091,0.041-0.163,0.116-0.199,0.209l-1.264,3.206 C67.081,181.16,59.569,294.879,67.58,366.12l0.42,3.736l2.972,2.305c41.298,32.024,96.519,48.489,131.258,52.858l4.492,0.565 c1.46,0.184,2.855-0.66,3.371-2.038l22.61-60.407c0.705-1.883-0.495-3.939-2.481-4.251l-6.938-1.09 c-24.193-3.801-58.47-13.877-87.437-40.147c-0.618-0.561-0.022-1.569,0.76-1.279c2.354,0.875,4.95,1.889,7.623,2.933 c6.55,2.559,13.324,5.205,17.744,6.255c31.064,7.386,62.565,11.132,93.694,11.132v-0.554h0.065l0.004,0.554 c31.066,0,62.566-3.745,93.627-11.132c4.422-1.051,11.196-3.696,17.747-6.256c2.671-1.044,5.266-2.058,7.619-2.932 c0.782-0.29,1.378,0.719,0.76,1.279c-28.87,26.154-63.19,36.204-87.437,40.002l-6.936,1.086c-1.986,0.311-3.188,2.365-2.484,4.248 l22.614,60.556c0.515,1.379,1.911,2.224,3.371,2.04l4.496-0.565c34.737-4.369,89.954-20.834,131.253-52.858l2.972-2.305l0.42-3.736 C451.771,294.879,444.259,181.159,417.824,114.172z M181.874,278.634c-28.083,2.504-51.512-20.923-49.011-49.006 c1.918-21.527,19.252-38.863,40.78-40.783c28.083-2.504,51.512,20.923,49.011,49.006 C220.735,259.378,203.401,276.714,181.874,278.634z M337.7,278.634c-28.083,2.504-51.512-20.923-49.011-49.006 c1.918-21.527,19.252-38.863,40.78-40.783c28.082-2.504,51.512,20.923,49.011,49.006C376.561,259.378,359.227,276.714,337.7,278.634 z"></path> </g></svg>
+                  <a href="https://Discord.com">Discord</a>
+                </li>
+                <li>
+                  <svg width="35px" height="35px" viewBox="0 0 32.00 32.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.128"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.5840000000000005"> <rect x="2" y="2" width="28" height="28" rx="14" fill="#1275B1"></rect> <path d="M12.6186 9.69215C12.6186 10.6267 11.8085 11.3843 10.8093 11.3843C9.81004 11.3843 9 10.6267 9 9.69215C9 8.7576 9.81004 8 10.8093 8C11.8085 8 12.6186 8.7576 12.6186 9.69215Z" fill="white"></path> <path d="M9.24742 12.6281H12.3402V22H9.24742V12.6281Z" fill="white"></path> <path d="M17.3196 12.6281H14.2268V22H17.3196C17.3196 22 17.3196 19.0496 17.3196 17.2049C17.3196 16.0976 17.6977 14.9855 19.2062 14.9855C20.911 14.9855 20.9008 16.4345 20.8928 17.5571C20.8824 19.0244 20.9072 20.5219 20.9072 22H24V17.0537C23.9738 13.8954 23.1508 12.4401 20.4433 12.4401C18.8354 12.4401 17.8387 13.1701 17.3196 13.8305V12.6281Z" fill="white"></path> </g><g id="SVGRepo_iconCarrier"> <rect x="2" y="2" width="28" height="28" rx="14" fill="#1275B1"></rect> <path d="M12.6186 9.69215C12.6186 10.6267 11.8085 11.3843 10.8093 11.3843C9.81004 11.3843 9 10.6267 9 9.69215C9 8.7576 9.81004 8 10.8093 8C11.8085 8 12.6186 8.7576 12.6186 9.69215Z" fill="white"></path> <path d="M9.24742 12.6281H12.3402V22H9.24742V12.6281Z" fill="white"></path> <path d="M17.3196 12.6281H14.2268V22H17.3196C17.3196 22 17.3196 19.0496 17.3196 17.2049C17.3196 16.0976 17.6977 14.9855 19.2062 14.9855C20.911 14.9855 20.9008 16.4345 20.8928 17.5571C20.8824 19.0244 20.9072 20.5219 20.9072 22H24V17.0537C23.9738 13.8954 23.1508 12.4401 20.4433 12.4401C18.8354 12.4401 17.8387 13.1701 17.3196 13.8305V12.6281Z" fill="white"></path> </g></svg>
+                  <a href="https://www.linkedin.com/in/viren--acharya">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  
+    <div class="footer-bottom">
+        <p>&copy; 2025 Getcode. All Rights Reserved.</p>
+    </div>
+  </footer>
+</html>

@@ -1,0 +1,183 @@
+body {
+    background: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    padding: 2.4%;
+    background: #111;
+    overflow-y: auto;
+    height: 73dvh;
+    margin-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 14px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 0;
+}
+.sidebar ul li:hover {
+    background: #222;
+    border-radius: 8px;
+}
+
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;                   /*center*/
+    justify-content: center;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap; 
+    height: 150dvh;
+    margin-top: 20px;
+    /* margin-top: 10px; 
+    margin-left: 20px;  */
+    /* gap: 0;  /*Ensures no extra space */
+     /* padding-top: 80px;Adjust based on header height */
+    /* padding-bottom: 80px;Adjust based on footer height */ 
+}
+.code-preview {
+    border-radius: 13px 0 0 13px;
+}
+.code-editor {
+    border-radius: 0 13px 13px 0;
+}
+
+.code-preview,
+.code-editor {
+    /* width: 36dvw; */
+    width: 36dvw;
+    height: 50dvh;
+    min-height: 500px;
+    background: #222;
+    /* padding: 20px; */
+    /* border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;/*  Removes any extra spacing */
+}
+
+.code-preview {
+    width: 36dvw;
+    height: 50dvh;
+    background: #222;
+    padding: 20px;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers content vertically */
+    margin: 0;
+}
+/* 
+.checkBox {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 2px white;
+} */
+
+.tabs {
+    background-color: #333;
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Pushes elements to edges */
+    align-items: center;   
+    border-top-right-radius: 13px;
+    /* margin-bottom: 10px; */
+}
+
+#ht{
+    margin-left: 12px;
+}
+.tabs button.active {
+    background: #141414;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tabs button.cop {
+    background: #333;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 300px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 12px;
+    gap: 8px;
+    border-radius: 13px;
+}
+.tabs button.active:hover{
+    background: #1e1e1e;
+}
+/* .tabs button img {
+    width: 20px;
+    height: 20px;
+} */
+.content-wrapper {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between slider and main-content */
+}
+
+.top-nav{
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 20px; */
+}
+
+.code-container {
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-start;
+    background-color: #1e1e1e;
+    height: 90%;
+    width: 100%;
+    max-width: 1200px;
+    overflow: auto;
+    /* margin: auto; */
+    /* border: 1px solid white; */
+    /* padding: 10px; */
+    gap: 20px;
+    box-sizing: border-box;
+    border-bottom-right-radius: 13px;
+}
+
+pre.code {
+    margin: 0;
+    padding: 10px;
+    height: 45%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    min-height: 200px; /* Ensures the pre tag stays the same size */
+}

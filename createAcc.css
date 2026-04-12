@@ -1,0 +1,294 @@
+:root {
+  --main-bg-color-dark: rgb(0, 0, 0);
+
+}
+
+.key-icon {
+width: 24px; /* You can adjust the size as needed */
+height: 24px;
+fill: none; /* Makes sure the icon's fill is transparent */
+stroke: rgba(104, 236, 228, 0.943); 
+stroke-width: 2; /* Adjusts the line thickness */
+vertical-align: middle; /* Ensures the icon aligns well with text */
+}
+
+
+.input-container .icon:hover {
+stroke: rgba(5, 148, 148, 0.943); /* Slightly darker color on hover */
+cursor: pointer; /* Changes cursor to a pointer on hover */
+}
+
+
+
+
+input[type="password"]::placeholder {
+padding-left: 6px; /* Ensures placeholder text doesn't overlap with the icon */
+}
+
+/* Styling the icon inside the password input field */
+input[type="password"] .key-icon {
+position: absolute;
+top: 50%;
+left: 10px;
+transform: translateY(-50%);
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+ /* background-color: var(--main-bg-color);*//*
+ color: rgba(255, 255, 255, 0.8);*/
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+ background-color: inherit; /* Inherit from the body */
+
+  padding-top: 3.5%;
+  padding-left: 0%;
+  padding-right: 0%;
+}
+.forgot-password{
+  text-align: center;
+  font-size: 17px; 
+  margin-top: -15px; 
+  margin-bottom: -30px; 
+  color: rgba(255, 224, 166, 0.8); 
+}
+
+.link{
+  color: #22f7c2;
+  font-weight: bold; 
+  text-decoration: underline; 
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-size: 18px;
+}
+.link:hover{
+  color: #71b3fe; /* Change the color on hover */
+text-shadow: 0px 0px 10px #71b3fe, 0px 0px 20px #71b3fe, 0px 0px 30px #71b3fe; /* Enhanced glow */
+
+}
+.form {
+  height: 100%;
+  width: 100%;
+  padding: 30px ;
+  display: grid;
+  place-items: center;
+  gap: 45px;                  /*the gap beween input box*/
+  border: 1px solid transparent;
+  -o-border-image: linear-gradient(transparent, #ffe0a6, transparent) 1;/*to change the colour of the side lines*/
+  border-image: linear-gradient(transparent, #ffe0a6, transparent) 1;
+  border-width: 0 2px 0px 2px;
+  background: radial-gradient(
+      100% 61.73% at 100% 50%,
+      rgba(255, 224, 166, 0.05) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      91.09% 56.23% at 0% 50%,
+      rgba(255, 224, 166, 0.05) 0%,
+      transparent 100%
+    );
+  position: relative;
+}
+.form .input-container .icon {
+  width: 20px;  /* Adjust the icon size */
+  height: 20px;
+  margin-right: 10px; /* Space between icon and input */
+  fill: rgba(104, 236, 228, 0.943); /* Icon color */
+}
+.form .title {
+  color: rgb(97, 217, 217);
+  font-size: 180%;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 5px;
+  word-spacing: 3px;
+  text-transform: uppercase;
+  background: linear-gradient(rgb(65, 222, 144), rgb(34, 247, 194), rgb(22, 158, 231));
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.input-container {/*the shade under the input*/
+  display: flex;
+  align-items: center;
+  background: radial-gradient(
+    47.3% 73.08% at 50% 94.23%,
+    rgba(255, 255, 255, 0.1) 5%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border: 1px solid transparent;
+  border-image: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.445) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ) 1;
+  border-width: 0 0 1px 0;
+}
+
+.input-container .input {
+  background: transparent;
+  border: none;
+  padding: 15px;
+  color: rgb(37, 246, 190);
+}
+
+.input-container .input:focus {
+  outline: none;
+  color: #71b3fe;
+}
+
+.login-button {
+  width: 100%;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+.form .login-button .input {
+  cursor: pointer;
+  padding: 20px;/*1rem*/
+  width: 100%;
+  background: radial-gradient(
+      100% 45% at 100% 50%,
+      rgba(255, 224, 166, 0.084) 0%,
+      rgba(115, 115, 115, 0) 100%
+    ),
+    radial-gradient(
+      100% 45% at 0% 50%,
+      rgba(255, 224, 166, 0.084) 0%,
+      rgba(115, 115, 115, 0) 100%
+    );
+  border: 1px solid transparent;
+  border-image: linear-gradient(transparent, #ffe0a6, transparent) 1;
+  border-width: 0 1px 0 1px;
+  text-align: center;
+  color: #ffe0a6;                            /*the colour of the vutton name*/
+  font-size: 18px;/*1rem*/
+}
+.input::placeholder {
+  color: rgba(104, 236, 228, 0.943);
+  text-align: left;
+}
+.form .login-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.3764705882) 0.5px,
+    transparent 0.5px
+  );
+  background-size: 0.1px 3px;
+  mix-blend-mode: soft-light;
+  -webkit-mask-image: radial-gradient(
+      40% 45% at 100% 50%,
+      white 0%,
+      transparent 100%
+    ),
+    radial-gradient(40% 45% at 0% 50%, white 0%, transparent 100%);
+  mask-image: radial-gradient(40% 45% at 100% 50%, white 0%, transparent 100%),
+    radial-gradient(40% 45% at 0% 50%, white 0%, transparent 100%);
+}
+.form .login-button:hover {
+  animation: flicker 0.5s infinite;
+  width: 105%;
+}
+.form .login-button:active {
+  width: 95%;
+}
+.login-button .input {
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  background: radial-gradient(
+      100% 45% at 100% 50%,
+      rgba(255, 224, 166, 0.084) 0%,
+      rgba(115, 115, 115, 0) 100%
+    ),
+    radial-gradient(
+      100% 45% at 0% 50%,
+      rgba(255, 224, 166, 0.084) 0%,
+      rgba(115, 115, 115, 0) 100%
+    );
+  border: 1px solid transparent;
+  border-image: linear-gradient(transparent, #ffe0a6, transparent) 1;
+  text-align: center;
+  color: #ffe0a6;
+  font-size: 18px;
+}
+
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  50% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+}
+
+.texture {
+  position: absolute;
+  background-image: linear-gradient(0deg, #ffffff 1px, transparent 1px);
+  background-size: 1px 5px;
+  inset: 0;
+  mix-blend-mode: soft-light;
+  mask-image: radial-gradient(30% 45% at 100% 50%, white 0%, transparent 100%),
+    radial-gradient(30% 45% at 0% 50%, white 0%, transparent 100%);
+  pointer-events: none;
+  animation: movingLines 1s linear infinite;
+}
+@keyframes flicker {
+  0% {
+    filter: brightness(100%);
+  }
+  10% {
+    filter: brightness(80%);
+  }
+  20% {
+    filter: brightness(120%);
+  }
+  30% {
+    filter: brightness(90%);
+  }
+  40% {
+    filter: brightness(110%);
+  }
+  50% {
+    filter: brightness(100%);
+  }
+  60% {
+    filter: brightness(85%);
+  }
+  70% {
+    filter: brightness(95%);
+  }
+  80% {
+    filter: brightness(105%);
+  }
+  90% {
+    filter: brightness(115%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+@keyframes movingLines {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 5px;
+  }
+} 
