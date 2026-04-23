@@ -4,7 +4,7 @@ GetCode is a beginner-friendly web platform designed to help developers quickly 
 
 The platform provides a collection of pre-built UI elements such as buttons, cards, forms, and layouts, allowing users to copy and integrate them into their own projects easily.
 
-Additionally, the project is designed with the vision of enabling users to upload and share their own UI components, creating a collaborative space for developers and designers.
+Additionally, the project is designed with the vision of enabling users to upload and share their own UI components, creating a collaborative space for developers and Designers.
 
 **Key Features:**
 
