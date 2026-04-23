@@ -217,3 +217,31 @@ nav ul li.categories a {
         margin-bottom: 10px;
     }
 }
+
+
+
+/* button fix */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* prevent overlap issues */
+.theme-switch {
+    position: relative;
+    z-index: 2;
+}
+
+.create-button {
+    position: relative;
+    z-index: 1;
+}
+
+.theme-switch__container {
+    pointer-events: none;
+}
+
+.theme-switch input {
+    pointer-events: auto;
+}

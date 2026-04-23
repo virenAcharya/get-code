@@ -18,7 +18,7 @@
         }
     </script>
 </head>
-<header class="site-header">
+  <header class="site-header">
     <div class="header-container">
       <div class="log">
         <div class="logo">
@@ -27,28 +27,39 @@
         </div></div>
         <nav class="navigation">
             <ul>
-              <li><a href="home.html">Home</a></li>
-              <li><a href="aboutus.html">About</a></li>
-              <li><a href="service.html">Services</a></li>
-              <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li class="categories">
                   <a href="#">Categories</a>
                   <ul class="dropdown">
-                      <li><a href="#">all</a></li>
-                      <li><a href="#">Button</a></li>
-                      <li><a href="#">Input</a></li>
-                      <li><a href="#">Form</a></li>
-                      <li><a href="#">Toggle Switch</a></li>
-                      <li><a href="#">Checkbox</a></li>
-                      <li><a href="#">radio button</button></a></li>
-                      <li><a href="#">loaders</a></li>
+                      <li><a href="#" data-filter="all">all</a></li>
+                      <li><a href="#" data-filter="button">Button</a></li>
+                      <li><a href="#" data-filter="input">Input</a></li>
+                      <li><a href="#" data-filter="form">Form</a></li>
+                      <li><a href="#" data-filter="toggle_switch">Toggle Switch</a></li>
+                      <li><a href="#" data-filter="checkbox">Checkbox</a></li>
+                      <li><a href="#" data-filter="radio_btn">radio button</button></a></li>
+                      <li><a href="#" data-filter="loader">loaders</a></li>
                   </ul>
               </li>
             </ul>
         </nav>
     </div>
 
+    <a href="login.html" style="text-decoration: none;">
+      <button class="create-button" 
+        style="font-size: 18px; font-weight: bold; margin-right: 10px; height: 55px; min-width: 125px; 
+               display: flex; align-items: center; justify-content: center; gap: 14px;  
+               border: none; border-radius: 12px; cursor: pointer;">
+    <span class="plus-icon" style="font-size: 18px; font-weight: bold;">+</span> 
+    <span style="font-size: 18px; font-weight: bold;">Create</span>
+</button></a>
+
     <label class="theme-switch">
+      
+    
         <input type="checkbox" class="theme-switch__checkbox" onclick="darklight()" checked>
         <div class="theme-switch__container">
           <div class="theme-switch__clouds"></div>
@@ -433,7 +444,7 @@
         <div class="footer-links">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="home.html">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="aboutus.html">About</a></li>
               <li><a href="service.html">Services</a></li>
               <li><a href="contact.html">Contact</a></li>

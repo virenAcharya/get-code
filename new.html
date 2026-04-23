@@ -75,20 +75,21 @@
             color: white;
         }
         textarea {
-            width: 100%;
-            flex: 1;
-            padding: 10px;
-            font-family: monospace;
-            border-radius: 5px;
-            /* border: 1px solid #ccc; */
-            resize: vertical;
-            display: none;
-            min-height: 200px;
-        }
-        textarea.active {
-            display: block;
-            border: none;
-        }
+    width: 100%;
+    flex: 1;
+    padding: 10px;
+    font-family: monospace;
+    border-radius: 5px;
+    resize: vertical;
+    min-height: 200px;
+
+    display: none; /* 👈 hide by default */
+}
+
+textarea.active {
+    display: block; /* 👈 show only active */
+}
+       
         button.submit {
             padding: 10px 15px;
             font-size: 16px;
@@ -140,11 +141,22 @@
     document.getElementById("cssCode").addEventListener("input", updatePreview);
 
     function toggleEditor(type) {
-        document.getElementById("htmlCode").classList.toggle("active", type === 'html');
-        document.getElementById("cssCode").classList.toggle("active", type === 'css');
-        document.getElementById("htmlBtn").classList.toggle("active", type === 'html');
-        document.getElementById("cssBtn").classList.toggle("active", type === 'css');
+    const html = document.getElementById("htmlCode");
+    const css = document.getElementById("cssCode");
+    html.classList.remove("active");
+    css.classList.remove("active");
+
+    document.getElementById("htmlBtn").classList.remove("active");
+    document.getElementById("cssBtn").classList.remove("active");
+
+    if (type === "html") {
+        html.classList.add("active");
+        document.getElementById("htmlBtn").classList.add("active");
+    } else {
+        css.classList.add("active");
+        document.getElementById("cssBtn").classList.add("active");
     }
+}
 </script>
 
 </body>
